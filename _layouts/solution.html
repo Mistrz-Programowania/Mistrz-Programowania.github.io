@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% include mathjax.html %}
+
+<link rel="stylesheet" href="/css/mp-style.css">
+
+<div class="mp-sol-info mp-sol-origin">
+    <a href="/editions/{{ page.edition }}">
+        <span class="mp-badge mp-edition">Mistrz Programowania {{ page.edition }}</span>
+    </a>
+
+    <span class="mp-badge mp-round">runda {{ page.round }}</span>
+
+    {% if page.level %}
+    <span class="mp-badge mp-level">poziom {{ page.level }}</span>
+    {% endif %}
+</div>
+
+<div class="mp-sol-info mp-sol-tags">
+    Tagi: 
+    {% for tag in page.tags %}
+    <span class="mp-badge mp-tag">{{ tag }}</span>
+    {% endfor %}
+</div>
+
+<div class="mp-sol-info">
+    {% if page.author %}
+    Autor zadania: {{ page.author }}<br>
+    {% endif %}
+    {% if page.sol_author %}
+    Autor omówienia: {{ page.sol_author }}<br>
+    {% endif %}
+</div>
+
+<h1>Omówienie zadania {{ page.title }}</h1>
+
+
+{{ content }}

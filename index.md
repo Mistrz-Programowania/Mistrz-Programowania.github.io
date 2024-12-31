@@ -1,15 +1,12 @@
+---
+title: Mistrz Programowania
+---
+
 # Mistrz Programowania
 
-Test
+Strona z omówieniami zadań wszystkich edycji konkursu Mistrz Programowania.
 
-- a
-- b
-- c
-
-**def**
-
-*ghi*
-
-[Zadania](https://szkopul.edu.pl/c/mistrz-programowania-2025/p/)
-
-Go to [test page](test.md)
+- [Edycja 2022](editions/2022)
+- [Edycja 2023](editions/2023)
+- [Edycja 2024](editions/2024)
+- [Edycja 2025](editions/2025)
