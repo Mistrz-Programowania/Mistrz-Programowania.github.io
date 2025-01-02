@@ -10,6 +10,9 @@ strings: napisy
 dp: programowanie dynamiczne
 greedy: programowanie zachłanne
 sortings: sortowanie
+data_structures: struktury danych
 pref: sumy prefiksowe
 nt: teoria liczb
+bs: wyszukiwanie binarne
 patterns: wyszukiwanie wzorca
+sweep: zamiatanie
