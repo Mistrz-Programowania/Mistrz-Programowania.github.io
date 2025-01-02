@@ -4,6 +4,7 @@ layout: default
 
 {% include mathjax.html %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/mp-style.css">
 
 <div class="mp-sol-info mp-sol-origin">
@@ -11,7 +12,9 @@ layout: default
         <span class="mp-badge mp-edition">Mistrz Programowania {{ page.edition }}</span>
     </a>
 
-    <span class="mp-badge mp-round">runda {{ page.round }}</span>
+    <a href="/editions/{{ page.edition }}#runda-{{ page.round }}">
+        <span class="mp-badge mp-round">runda {{ page.round }}</span>
+    </a>
 
     {% if page.level %}
     <span class="mp-badge mp-level">poziom {{ page.level }}</span>
@@ -19,18 +22,32 @@ layout: default
 </div>
 
 <div class="mp-sol-info mp-sol-tags">
-    Tagi: 
+    Tagi:
     {% for tag in page.tags %}
-    <span class="mp-badge mp-tag">{{ tag }}</span>
+    <a href="/tags/{{ tag }}">
+        <span class="mp-badge mp-tag">{{ site.data.tags[tag] }}</span>
+    </a>
     {% endfor %}
 </div>
 
 <div class="mp-sol-info">
     {% if page.author %}
-    Autor zadania: {{ page.author }}<br>
+    Autor zadania: <span class="mp-badge mp-author"><i class="fa fa-user"></i> {{ page.author }}</span>
+    {% endif %}
+    {% if page.authors %}
+    Autorzy zadania: {% for author in page.authors %} <span class="mp-badge mp-author"><i class="fa fa-user"></i> {{ author }}</span> {% endfor %}
     {% endif %}
     {% if page.sol_author %}
-    Autor omówienia: {{ page.sol_author }}<br>
+    Autor omówienia: <span class="mp-badge mp-author"><i class="fa fa-user"></i> {{ page.sol_author }}</span>
+    {% endif %}
+</div>
+
+<div class="mp-sol-info">
+    {% if page.statement %}
+    <a href="{{ page.statement }}" ><span class="mp-badge mp-statement"><i class="fa fa-book"></i> Treść</span></a>
+    {% endif %}
+    {% if page.video %}
+    <a href="{{ page.video }}" ><span class="mp-badge mp-video"><i class="fa fa-play"></i> Omówienie wideo</span></a>
     {% endif %}
 </div>
 

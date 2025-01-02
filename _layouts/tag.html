@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<a href="/tags">Wszystkie tagi</a>
+
+<section>{{ content }}</section>
+
+<h2><i class="fa fa-tag"></i> {{ site.data.tags[page.slug] | capitalize }}</h2>
+
+<ul>
+    {% for solution in site.solutions %}
+        {% if solution.tags contains page.slug %}
+        <li><a href="{{ solution.url }}">{{ solution.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>

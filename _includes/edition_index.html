@@ -1,0 +1,10 @@
+{% for round in site.data.rounds[include.edition] %}
+<h3>Runda {{ round }}</h3>
+<ul>
+  {% for solution in site.solutions %}
+  {% if solution.edition == include.edition and solution.round == round %}
+  <li><a href="{{ solution.url }}">{{ solution.title }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}

@@ -4,27 +4,42 @@
     padding: 4px 8px;
     text-align: center;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-right: 4px;
 }
 
 .mp-edition {
     background-color: #241140;
     color: white;
-    font-weight: bold;
 }
 
 .mp-round {
     background-color: #241140;
     color: white;
-    font-weight: bold;
 }
 
 .mp-level {
     background-color: #241140;
     color: white;
-    font-weight: bold;
 }
 
 .mp-tag {
+    background-color: #c98b2e;
+    color: white;
+}
+
+.mp-author {
+    background-color: #241140;
+    color: white;
+}
+
+.mp-statement {
+    background-color: #c98b2e;
+    color: white;
+}
+
+.mp-video {
     background-color: #c98b2e;
     color: white;
 }
