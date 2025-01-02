@@ -30,8 +30,8 @@ Zatem $u$ też byłby połączony z jedynką, co jest niedopuszczalene, bo $u$ j
 Możemy więc pozbyć się wszystkich poddrzew zainfekowanych wierzchołków, i zostaniemy z drzewem, 
 w którym każdy zainfekowany wierzchołek jest liściem (jak na rysunkach poniżej).
 
-![Graf 1](mp2023-r2e-fig1.png){: width="49%" }
-![Graf 2](mp2023-r2e-fig2.png){: width="49%" }
+![Graf 1](r2e-fig1.png){: width="49%" }
+![Graf 2](r2e-fig2.png){: width="49%" }
 
 ### Obserwacja 2
 
@@ -47,11 +47,11 @@ Możemy więc znowu skompresować nasze drzewo. Możemy usunąć wierzchołek $v
 $u$ informację (wagę), że jeżeli go ocalimy, to dodamy do wyniku o jedgen wierzchołek ($v$) więcej. Potem możemy
 powtarzać ten zabieg dopóki wszystkie liście nie będą zainfekowane. Poniżej przykład takiego procesu.
 
-![Graf 3](mp2023-r2e-fig3.png){: width="19%" }
-![Graf 4](mp2023-r2e-fig4.png){: width="19%" }
-![Graf 5](mp2023-r2e-fig5.png){: width="19%" }
-![Graf 6](mp2023-r2e-fig6.png){: width="19%" }
-![Graf 7](mp2023-r2e-fig7.png){: width="19%" }
+![Graf 3](r2e-fig3.png){: width="19%" }
+![Graf 4](r2e-fig4.png){: width="19%" }
+![Graf 5](r2e-fig5.png){: width="19%" }
+![Graf 6](r2e-fig6.png){: width="19%" }
+![Graf 7](r2e-fig7.png){: width="19%" }
 
 Po zastosowaniu tych dwóch kompresji zostaniemy z drzewem o ważonych wierzchołkach, w którym wszytkie liście są zainfekowane oraz
 wszystkie pozostałe wierzchołki są zdrowe. Waga wierzchołka w tym drzewie mówi nam ile powinnniśmy dodać do wyniku ocalając dany
@@ -95,7 +95,7 @@ zakładając że zaczynamy w wierzchołku $v$ i mamy do dyspozycji $t$ czasu. $s
 "zostać" w tym poddrzewie, czyli nie interesuje nas gdzie się znajdujemy po upływie czasu $t$. W przeciwnym wypadku nie możemy "zostać"
 w tym poddrzewie i chcemy po upływie czasu $t$ znaleźć się spowrotem w wierzchołku $v$. Poniżej przykład.
 
-![Graf 8](mp2023-r2e-fig8.png)
+![Graf 8](r2e-fig8.png)
 
 W powyższym grafie $DP[2][7][true] = 13$, ponieważ w 7 jednostek czasu możemy odwiedzić całe poddrzewo 2 w taki sposób:
 $2 \rightarrow 5 \rightarrow 6 \rightarrow 5 \rightarrow 7 \Rightarrow 1 \rightarrow 2 \rightarrow 3 \rightarrow 4$, gdzie
