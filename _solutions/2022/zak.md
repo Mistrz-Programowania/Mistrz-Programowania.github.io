@@ -8,22 +8,27 @@ tags:
   - implementation
 ---
 
-Test
+W zadaniu należało wczytać dwie liczby całkowite i wypisać ich różnicę.
 
 ## Przykładowe implementacje
 
 ### C++
 
 ```cpp
-main(){}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int m, k;
+    cin >> m >> k;
+    cout << k - m << '\n';
+    return 0;
+}
 ```
 
 ### Python
 
 ```py
-pass
+m, k = map(int, input().split())
+print(k - m)
 ```
-
-## Uwagi
-
-- test
