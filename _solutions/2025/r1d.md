@@ -15,7 +15,7 @@ Opiszmy zadanie w terminologii grafowej. Dane jest drzewo ukorzenione w wierzcho
 
 - **Dla każdej pary $(a, b), [ a \neq b ]$ wierzchołków ze zbioru $W$, $a$ nie jest przodkiem $b$.**
 
-- **$|W| = K$**
+- **$ \lvert W \rvert = K$**
 
 Celem zadania jest stwierdzenie, że nie istnieje żaden **poprawny** zbiór, albo w przeciwnym wypadku policzenie wartości:
 
@@ -83,9 +83,9 @@ Wykażemy, iż każdą z tych faz możemy ograniczyć od góry tą samą złożo
 
     Analiza złożoności
 
-<u>Lemat 1</u>: W całym poddrzewie wierzchołka $v$, wykonamy  sumarycznie $O(t(v)^2)$ operacji.
+<ins>Lemat 1</ins>: W całym poddrzewie wierzchołka $v$, wykonamy  sumarycznie $O(t(v)^2)$ operacji.
 
-<u>Dowód</u>: rozważmy wierzchołek $v$. Będziemy *"dołączali"* kolejnych synów. *"Dołączając"* kolejnego syna, rozpatrujemy co najwyżej wszystkie pary wyników z *"dołączanego"* poddrzewa z wynikami z już przedtem *"dołączonych"* synów. Rozpatrujemy więc jedynie pary rozmiarów z poddrzew **różnych** synów. Liczba par takich rozmiarów jest nie większa niż liczba par wierzchołków w danych poddrzewach (bo liczba wierzchołków w poddrzewie jest oczywiście równa rozmiarowi poddrzewa). Zauważmy, że mowa tu o parach $(a, b)$ wierzchołków, dla których $v$ to $lca$ (bo znajdują się w poddrzewach różnych synów). Ponieważ dla każdej pary wierzchołków w drzewie istnieje dokładnie jedno $lca(a, b)$, więc w takim razie wykonujemy sumarycznie $O(t(v)^2)$ (liczba par wierzchołków) operacji w całym poddrzewie $v$ (w ogólności w dowolnym drzewie wielkości $n$, wykonamy $O(n^2)$ operacji). $\blacksquare$
+<ins>Dowód</ins>: rozważmy wierzchołek $v$. Będziemy *"dołączali"* kolejnych synów. *"Dołączając"* kolejnego syna, rozpatrujemy co najwyżej wszystkie pary wyników z *"dołączanego"* poddrzewa z wynikami z już przedtem *"dołączonych"* synów. Rozpatrujemy więc jedynie pary rozmiarów z poddrzew **różnych** synów. Liczba par takich rozmiarów jest nie większa niż liczba par wierzchołków w danych poddrzewach (bo liczba wierzchołków w poddrzewie jest oczywiście równa rozmiarowi poddrzewa). Zauważmy, że mowa tu o parach $(a, b)$ wierzchołków, dla których $v$ to $lca$ (bo znajdują się w poddrzewach różnych synów). Ponieważ dla każdej pary wierzchołków w drzewie istnieje dokładnie jedno $lca(a, b)$, więc w takim razie wykonujemy sumarycznie $O(t(v)^2)$ (liczba par wierzchołków) operacji w całym poddrzewie $v$ (w ogólności w dowolnym drzewie wielkości $n$, wykonamy $O(n^2)$ operacji). $\blacksquare$
 
 ---
 
@@ -93,7 +93,7 @@ Wykażemy, iż każdą z tych faz możemy ograniczyć od góry tą samą złożo
 
 ---
 
-Powiemy, że wierzchołek jest **oznaczony**, gdy $t(v) \geq K$ oraz dla każdego jego potomka $x$, $t(x) < K$. Jeżeli $t(v) = K$, to oczywiście, na mocy <u>lematu 1</u> wykonaliśmy w poddrzewie $v$ sumarycznie nie więcej niż $O(K^2)$ operacji. Jeżeli natomiast $t(v) > K$, to istnieje takie $i$, że $t_i(v) \geq K$. Weźmy pierwsze takie $i$. Ponieważ dla każdego syna $s_i$ zachodzi $t(s_i) < K$, więc $t_i(v) < s_{i-1}(v) + k$. Ponieważ, wzięliśmy pierwsze takie $i$, więc w takim razie $t_i(v) < 2 \cdot K$. W takim razie sumaryczna liczba operacji w poddrzewach wierzchołków $s_1, s_2, \cdots, s_i$, na mocy <u>lematu 1</u> nie przekroczyła $O(K^2)$.
+Powiemy, że wierzchołek jest **oznaczony**, gdy $t(v) \geq K$ oraz dla każdego jego potomka $x$, $t(x) < K$. Jeżeli $t(v) = K$, to oczywiście, na mocy <ins>lematu 1</ins> wykonaliśmy w poddrzewie $v$ sumarycznie nie więcej niż $O(K^2)$ operacji. Jeżeli natomiast $t(v) > K$, to istnieje takie $i$, że $t_i(v) \geq K$. Weźmy pierwsze takie $i$. Ponieważ dla każdego syna $s_i$ zachodzi $t(s_i) < K$, więc $t_i(v) < s_{i-1}(v) + k$. Ponieważ, wzięliśmy pierwsze takie $i$, więc w takim razie $t_i(v) < 2 \cdot K$. W takim razie sumaryczna liczba operacji w poddrzewach wierzchołków $s_1, s_2, \cdots, s_i$, na mocy <ins>lematu 1</ins> nie przekroczyła $O(K^2)$.
 
 ---
 
@@ -129,7 +129,7 @@ Mamy już teraz rozpatrzone wszystkie *fazy*. W takim razie wykazane zostało, i
 ## Uwagi:
 
 - Udowodniana amortyzacja ma znacznie bardziej ogólny charakter - pozwala rozwiązać dowolne zadanie na drzewie, w którym musimy wyliczyć $dp[v][k]$ w podobny sposób *"dołączając"* synów oraz stany $k > t(v)$ są niepotrzebne.
-- <u>lemat 1</u> jest nieco bardziej znanym, szczególnym przypadkiem powyższej amortyzcji, który było mi prościej udowodnić na początek (:
+- <ins>lemat 1</ins> jest nieco bardziej znanym, szczególnym przypadkiem powyższej amortyzcji, który było mi prościej udowodnić na początek (:
 - Jednym z typów niepoprawnych rozwiązań nadesłanych przez uczestników było zakładanie, że im większe $K$, tym lepszy wynik. Takie założenie nie jest jednak niestety niepoprawne. Paczka z testami zawiera kontrprzykłady.
 
 
