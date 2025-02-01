@@ -9,6 +9,7 @@ tags:
   - dp
   - trees
   - amortization
+statement: https://szkopul.edu.pl/problemset/problem/HCB569MZEimuHmZd7QvVVvHx/site/
 ---
 
 Opiszmy zadanie w terminologii grafowej. Dane jest drzewo ukorzenione w wierzchołku $1$ oraz liczba $K$. Każdy wierzchołek $v$ ma przypisaną wartość $a[v]$. Podzbiór $W$ wierzchołków drzewa nazwiemy **poprawnym**, gdy:

@@ -10,6 +10,7 @@ tags:
   - small_to_large
   - persistent
   - dsu
+statement: https://szkopul.edu.pl/problemset/problem/CP0FPuWMoMR8-aGK5-QLVaha/site/
 ---
 
 W zadaniu musimy obsłużyć trzy typy zapytań:
