@@ -6,8 +6,8 @@ round: 4
 level: e
 author: Szymon Hajderek
 tags:
-  - data structure
-  - small to large
+  - data_structures
+  - small_to_large
   - persistent
   - dsu
 ---

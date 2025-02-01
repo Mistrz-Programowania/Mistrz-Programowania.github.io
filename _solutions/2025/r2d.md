@@ -6,7 +6,7 @@ round: 2
 level: d
 author: Mateusz Wesołowski
 tags:
-  - segment tree
+  - segment_trees
   - math
 statement: https://szkopul.edu.pl/problemset/problem/dPRQ8n3DBZqD1q-mK27vsCB3/site/
 ---

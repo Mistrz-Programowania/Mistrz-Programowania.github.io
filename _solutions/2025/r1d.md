@@ -6,8 +6,8 @@ round: 1
 level: d
 author: Szymon Hajderek
 tags:
-  - dynamic programming
-  - tree
+  - dp
+  - trees
   - amortization
 ---
 

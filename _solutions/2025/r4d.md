@@ -6,9 +6,9 @@ round: 4
 level: d
 author: Mateusz Wesołowski
 tags:
-  - dynamic programming
+  - dp
   - combinatorics
-  - game theory
+  - game_theory
 statement: https://szkopul.edu.pl/problemset/problem/Dke0Ue-v5bAcIUzL7TUaEYVo/site/
 ---
 
