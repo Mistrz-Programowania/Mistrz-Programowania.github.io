@@ -8,7 +8,7 @@ author: Tomasz Kwiatkowski
 tags:
   - interactive
   - math
-video: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+statement: https://szkopul.edu.pl/problemset/problem/_HbDVCmMe7YiX7RR699ol5nP/site/
 ---
 
 Przypomnijmy cechę podzielności przez $9$ -- liczba jest podzielna przez $9$
@@ -29,20 +29,21 @@ Na koniec wystarczy wypisać cyfrę `9 - suma % 9` (warto też zauważyć,
 
 ```cpp
 #include <iostream>
+using namespace std;
 
 int main() {
     int n;
-    std::cin >> n;
+    cin >> n;
     
     int sum;
-    std::cin >> sum;
+    cin >> sum;
     for (int i = 0; i < n - 1; ++i) {
-        std::cout << 0 << std::endl;
+        cout << 0 << endl;
         int opponent;
-        std::cin >> opponent;
+        cin >> opponent;
         sum += opponent;
     }
-    std::cout << 9 - sum % 9 << std::endl;
+    cout << 9 - sum % 9 << endl;
     return 0;
 }
 ```

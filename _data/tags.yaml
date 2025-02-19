@@ -1,3 +1,5 @@
+amortization: amortyzacja
+dijkstra: Dijkstra
 trees: drzewa
 segment_trees: drzewa przedziałowe
 trie: drzewo trie
@@ -6,13 +8,17 @@ implementation: implementacyjne
 interactive: interaktywne
 combinatorics: kombinatoryka
 math: matematyka
+small_to_large: mniejszy do większego
 strings: napisy
 dp: programowanie dynamiczne
 greedy: programowanie zachłanne
 sortings: sortowanie
 data_structures: struktury danych
 pref: sumy prefiksowe
+game_theory: teoria gier
 nt: teoria liczb
+persistent: trwałe
+dsu: union-find
 bs: wyszukiwanie binarne
 patterns: wyszukiwanie wzorca
 sweep: zamiatanie
