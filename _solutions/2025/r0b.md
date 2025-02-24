@@ -9,6 +9,7 @@ tags:
   - implementation
 statement: https://szkopul.edu.pl/problemset/problem/TE3Ga-gbceEEst3mL-gFw_AT/site
 ---
+
 Celem zadania jest walidacja opisu kart oraz zsumowanie ich punktacji zgodnie z 
 zasadami opisanymi w treści. 
 
@@ -19,6 +20,8 @@ rozwiązaniem tego problemu jest użycie `std::map` w C++ lub `dict()` w Pythoni
 
 Aby uniknąć dwukrotnego przetwarzania wejścia, można sumować punkty podczas 
 sprawdzenia czy dana karta jest legalna.
+
+## Przykładowe implementacje
 
 ### C++
 
