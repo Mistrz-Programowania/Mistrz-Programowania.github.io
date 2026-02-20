@@ -1,6 +1,6 @@
 ---
-title: Mistrz Programowania 2026
-edition: 2026
+title: Mistrz Programowania 2025
+edition: 2025
 ---
 
 {% include edition_index.html edition=page.edition %}
