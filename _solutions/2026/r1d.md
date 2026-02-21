@@ -13,7 +13,7 @@ statement: https://szkopul.edu.pl/problemset/problem/PhhFxukOD9iIXmhCfwvGqNSK/si
 ### Treść
 W zadaniu mamy podany graf ważony i należy odpowiedzieć na q pytań o minimalne takie X, że da się dojść z a do b, używając krawędzi o wagach $\leq X$.
 
-### Podzadanie 1 - Rozwiązanie wolne - $O(n*m*logn + q)$
+### Podzadanie 1 - Rozwiązanie wolne - $O(n \cdot m \cdot logn + q)$
 Zdefiniujmy wartość ścieżki jako:
 
 ##### Def 1:
@@ -52,7 +52,6 @@ W rozwiązaniu wzorcowym 2 logn dla każdego zapytania bierze się z wyliczania 
 Z rozwiązania 1 możemy wnioskować, że odpowiedź zawsze jest ścieżką w drzewie rozpinającym naszego grafu i okazuje się, że każde minimalne drzewo rozpinające to spełnia.
 
 Dowód:
-```py
 Zróbmy dowód przez sprzeczność.
 W MST ścieżka z A do B ma największą wagę równą w,
 a istnieje ścieżka P z A do B, której maksymalna waga krawędzi jest mniejsza niż w.
