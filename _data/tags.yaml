@@ -2,11 +2,14 @@ amortization: amortyzacja
 dijkstra: Dijkstra
 trees: drzewa
 segment_trees: drzewa przedziałowe
+treap: drzewiec
+li_chao_tree: drzewo Li Chao
 trie: drzewo trie
 graphs: grafy
 implementation: implementacyjne
 interactive: interaktywne
 combinatorics: kombinatoryka
+lca: LCA
 math: matematyka
 small_to_large: mniejszy do większego
 strings: napisy
@@ -17,6 +20,7 @@ data_structures: struktury danych
 pref: sumy prefiksowe
 game_theory: teoria gier
 nt: teoria liczb
+convex_hull_trick: trik z otoczcką wypukłą
 persistent: trwałe
 dsu: union-find
 bs: wyszukiwanie binarne
