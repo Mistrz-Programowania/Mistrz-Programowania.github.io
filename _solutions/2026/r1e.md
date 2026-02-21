@@ -35,7 +35,7 @@ Operacje na strukturze wyglądają następująco:
 3. Dodaj dwójkę z ciągu 2.
 4. Znajdź maksymalną wartość z zebranych do tej pory dwójek i trójek.
 
-Dla rozjaśnienia nasza struktura danych trzyma takie trójki liczb {c, b1, b2}, gdzie każda z nich przechowuje jakieś możliwe dokończenie rozwiązania, które będzie miało c trójek oraz min(b1,b2) dwójek i wartość takiej trójki liczb $val(c,b1,b2) = C*c + B*min(b1,b2)$,  
+Dla rozjaśnienia nasza struktura danych trzyma takie trójki liczb {c, b1, b2}, gdzie każda z nich przechowuje jakieś możliwe dokończenie rozwiązania, które będzie miało c trójek oraz min(b1,b2) dwójek i wartość takiej trójki liczb $val(c,b1,b2) = C \cdot c + B \cdot min(b1,b2)$,  
 a operacje odpowiadają odpowiednio:
 1. Dodaj trójkę liczb do zbioru {x, 0, 0}.
 2. Do każdego b1 dodaj 1.
@@ -63,9 +63,9 @@ return ans;
 
 Teraz pozostaje nam wymyślić, jaka struktura danych pozwoli nam na te operacje. Okazuje się, że najprostszym sposobem wymyślenia rozwiązania bez większych obserwacji będzie wykorzystanie kopcodrzewa (Treap - https://cp-algorithms.com/data_structures/treap.html).
 
-Mianowicie zamieńmy nasze trójki {c,b1,b2} na pary {$C*c + B*b1, C*c + B*b2$}, gdzie new_val({a,b}) = min(a,b).  
+Mianowicie zamieńmy nasze trójki {c,b1,b2} na pary {$C \cdot c + B \cdot b1, C \cdot c + B \cdot b2$}, gdzie new_val({a,b}) = min(a,b).  
 To okazuje się już banalnie proste do zrobienia przy użyciu kopcodrzewa, gdyż tak będzie działała operacja:
-1. Insertujemy parę {$C*x$, $C*x$} - kopcodrzewo pozwala na to w czasie $O(logn)$.
+1. Insertujemy parę {$C \cdot x$, $C \cdot x$} - kopcodrzewo pozwala na to w czasie $O(logn)$.
 2. Do pierwszych elementów wszystkich par dodaj B - używając lazy propagation możemy to wykonać w czasie $O(logn)$.
 3. Do drugich elementów wszystkich par dodaj B - analogicznie jak operacja 2, $O(logn)$.
 4. Z wyliczaniem może się pojawić mały problem, bo nie do końca umiemy utrzymywać maxa po min(a,b) i dodawać do a i b, ale nasze wątpliwości rozwiewają się po zrobieniu sprytnej obserwacji, że pary {a,b} w kopcodrzewie możemy trzymać posortowane po wartości (a-b). Wtedy dodanie do wszystkich a lub b nadal utrzymuje ten porządek, a po wykonaniu splita na kopcodrzewie względem liczby 0 nasze zapytania możemy podzielić na 2 typy: max spośród par, gdzie a >= b, oraz max spośród par, gdzie a < b. Rozwiązujemy je poprzez znalezienie max po pierwszych liczbach w parach i max po drugich liczbach w parach. Wynikiem jest większa z tych dwóch liczb.
@@ -89,10 +89,10 @@ oraz po linijce wyliczania ans:
 ```cpp
 func.push_back({i, Operacja4()});
 ```
-Okazuje się, że jeśli pytamy o wartość dla jakiegoś hipotetycznego A, oznaczmy go przez x, to wynosi ona maksimum po każdym $a,b \in$ func: $a*x + b$. Sprowadzamy więc problem do następującego:
+Okazuje się, że jeśli pytamy o wartość dla jakiegoś hipotetycznego A, oznaczmy go przez x, to wynosi ona maksimum po każdym $a,b \in$ func: $a \cdot x + b$. Sprowadzamy więc problem do następującego:
 
 Mamy $O(n)$ funkcji liniowych i musimy odpowiadać na maksymalną wartość spośród ich wszystkich dla jakiegoś całkowitego x. Ten problem można rozwiązać Convex Hull Trickiem lub drzewem Li Chao (https://cp-algorithms.com/geometry/convex_hull_trick.html) w czasie logarytmicznym od zapytania. W pliku wla.cpp zostało zaimplementowane rozwiązanie z Convex Hull Trickiem.
 
-To już ostatni krok naszego zadania, a całkowita złożoność czasowa wynosi: $O((n+m+q)*logn)$, a złożoność pamięciowa $O(n+m)$.
+To już ostatni krok naszego zadania, a całkowita złożoność czasowa wynosi: $O((n+m+q) \cdot logn)$, a złożoność pamięciowa $O(n+m)$.
 
 Ciekawostka: Istnieją również rozwiązania (podzadania 6), które używają łatwiejszych w implementacji struktur danych, jak na przykład drzewo przedziałowe lub zmodyfikowana kolejka, która pozwala to rozwiązać w czasie liniowym, lecz uznałem, że opisany wyżej sposób jest łatwiejszy i przyjemniejszy do zrozumienia (i wcale nie taki ciężki do zaklepania).
