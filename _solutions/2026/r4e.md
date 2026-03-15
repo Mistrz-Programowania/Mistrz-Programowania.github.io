@@ -6,7 +6,8 @@ round: 4
 level: E
 author: Krzysztof Witkowski
 tags:
-  - math, nt
+  - math
+  - nt
 statement: https://szkopul.edu.pl/problemset/problem/35KFBwC_lkq3RPaTgBX80aIN/site/?key=statement
 ---
 
