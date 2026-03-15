@@ -46,7 +46,7 @@ jest równoważny warunkowi
 
 $$ \deg_{H[s]}(v) \leq |S|-t $$
 
-Wystarczy więc znaleźć taki zbiór $S$, że w grafie $H[S]$ każdy wierzchołek ma stopień co najwyżej $|S|-t$.
+Wystarczy więc znaleźć taki zbiór $S$, że w grafie $H[S]$ każdy wierzchołek ma stopień co najwyżej $s-t$, gdzie $s$ to liczba wierzchołków $S$.
 
 Zaczynamy od zbioru wszystkich wierzchołków i dopóki istnieje wierzchołek $v$ taki, że
 
